@@ -1,37 +1,92 @@
-* {
- box-sizing: border-box;
- margin: 0;
- padding: 0;
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
 }
 body {
- font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- background-color: #f4f6f9;
- padding: 20px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: #f4f6f9;
+padding: 20px;
+}
+.card {
+width: 600px;
+max-width: 100%;
+margin: 30px auto;
+padding: 25px;
+background-color: white;
+border: 1px solid #ccc;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+margin-bottom: 10px;
+color: #333;
+}
+p{
+margin-bottom: 20px;
+color: #666;
 }
 .form-group {
- margin-bottom: 15px;
- width: 100%;
- max-width: 400px;
+margin-bottom: 15px;
+width: 100%;
+max-width: 400px;
 }
 .form-label {
- display: block;
- margin-bottom: 5px;
- font-weight: bold;
- color: #333;
+display: block;
+margin-bottom: 5px;
+font-weight: bold;
+color: #333;
 }
 .form-input {
- width: 100%;
- padding: 10px 12px;
- border: 1px solid #ccc;
- border-radius: 4px;
- font-size: 14px;
- transition: border-color 0.3s;
+width: 100%;
+padding: 10px 12px;
+border: 1px solid #ccc;
+border-radius: 4px;
+font-size: 14px;
+transition: border-color 0.3s;
 }
-.form-input:focus {
- border-color: #3182ce;
- outline: none;
- box-shadow: 0 0 5px rgba(49, 130, 206, 0.5);
+.form-input {
+border-color: #3182ce;
+outline: none;
+box-shadow: 0 0 5px rgba(49, 130, 206, 0.5);
 }
-.form-input:invalid:touched {
- border-color: #e53e3e;
+.form-input {
+border-color: #e53e3e;
+}
+fieldset {
+margin-bottom: 20px;
+padding: 20px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+legend {
+padding: 0 5px;
+font-weight: bold;
+color: #333;
+}
+.radio-group {
+display: flex;
+gap: 15px;
+}
+small {
+color: #666;
+}
+.buttons {
+margin-top: 10px;
+}
+button {
+padding: 10px 15px;
+border: 1px solid #ccc;
+border-radius: 4px;
+cursor: pointer;
+}
+button {
+opacity: 1;
+}
+button {
+transform: scale(1);
+}
+button {
+opacity: 1;
+cursor: not-allowed;
 }
