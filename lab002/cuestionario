@@ -1,0 +1,25 @@
+1. diferencia entre box-sizing: content-box y box-sizing: borderbox. Proporcione un ejemplo de cálculo de ancho.
+
+content-box: width corresponde solamente al contenido. padding y el border se agregan al ancho final.
+border-box: width incluye el contenido el padding y el border.
+////width: 200px;
+///padding: 10px;
+///border: 5px solid;
+content-box(Ancho total)= 200+10+10+5+5= 230 px
+border-box:(Ancho total) = 200 px
+
+2. ¿Cómo funciona el cálculo de especificidad en CSS? Ordene de mayor a menor especificidad:
+Selector de ID, Selector de Clase, Estilos en línea (inline style), Selector de Etiqueta.
+  
+La especificidad determina que regla de CSS tiene prioridad cuando varias reglas intentan modificar el mismo elemento.
+De mayor a menor especificidad
+ -Estilos en línea(inline style) ///style="..."
+ -Selector de ID ///#elemento
+ -Selector de clase ///.elemento
+ -Selector de etiqueta///p, div, h1, etc.
+
+3. ¿Qué diferencia existe entre las propiedades CSS display: none y visibility: hidden respecto al
+espacio en el layout?
+
+display: none: el elemento desaparece y no ocupa espacio.
+visibility: hidden: el elemento se vuelve invisible pero mantiene el espacio que ocupaba.
