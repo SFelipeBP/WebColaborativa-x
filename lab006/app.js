@@ -1,20 +1,35 @@
+// app.js
 const express = require('express');
-const courseRoutes = require('./routes/courseRoutes');
+const courseRoutes = require('./routes/courseRoute');
 
 const app = express();
 
+// 1. Middleware global incorporado: express.json()
 app.use(express.json());
 
+// 2. Middleware personalizado de Auditoría (Logger con tiempo de respuesta)
 app.use((req, res, next) => {
-    console.log(`[${new Date().toISOString()}] ${req.method} en ${req.url}`);
+    const startTime = Date.now();
+    res.on('finish', () => {
+        const duration = Date.now() - startTime;
+        console.log(`[${new Date().toISOString()}] Método: ${req.method} | URL: ${req.url} | Status: ${res.statusCode} | Tiempo: ${duration}ms`);
+    });
     next();
 });
 
-app.use('/api/v1/cursos', courseRoutes);
+// Enrutador principal del recurso cursos
+app.use('/api/cursos', courseRoutes);
 
-app.listen(3000, () => {
-    console.log('API Express en puerto 3000');
+// 3. Middleware global de Manejo de Errores (HTTP 500)
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).json({
+        status: 'error',
+        message: 'Ocurrió un error interno en el servidor'
+    });
 });
 
-
-
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Servidor de Cursos ejecutándose en http://localhost:${PORT}`);
+});

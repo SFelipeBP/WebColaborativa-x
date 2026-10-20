@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "nombre": "Sebastian Felipe Begazo Puma",
+    "codigo": "20253458",
+    "carrera": "Ingeniería de Sistemas"
+  },
+  {
+    "id": 2,
+    "nombre": "estudiante2",
+    "codigo": "202xabcd",
+    "carrera": "Ingeniería de Sistemas"
+  },
+  {
+    "id": 3,
+    "nombre": "Estudiante3",
+    "codigo": "20211111",
+    "carrera": "Ingenieria de Sistemas"
+  }
+]
